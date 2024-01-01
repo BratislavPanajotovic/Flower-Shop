@@ -7,27 +7,46 @@
     <title>Cvecara</title>
   </head>
   <body>
-    <label class="label" for="forma">
       <form action="" class="forma">
         <div class="div-cvece">
-          <h1>Odaberite cvece:</h1>
-          <input type="text" /> Ruza <input type="text" /> Ljiljani
-          <input type="text" /> Gerberi
+          <h1 class="naslov-cvece">Odaberite cvece:</h1>
+          <div class="input-group">
+            <label for="ruza" class="ruza">Ruza</label>
+            <input type="number" id="ruza" />
+          </div>
+          <div class="input-group">
+            <label for="ljiljani">Ljiljani</label>
+            <input type="number" id="ljiljani" />
+          </div>
+          <div class="input-group">
+            <label for="gerberi">Gerberi</label>
+            <input type="number" id="gerberi" />
+          </div>
         </div>
         <div class="div-pokloni">
-          <h1>Dodatni pokloni:</h1>
-          <input type="checkbox" class="chbx-bombonjera" /> Bombonjera
-          <input type="checkbox" class="chbx-cokolada" /> Cokoloda
-          <input type="checkbox" class="chbx-sampanjac" /> Sampanjac
+          <h1 class="pokloni-naslov">Dodatni pokloni:</h1>
+          <div class="input-group checkbox-group">
+            <input type="checkbox" id="chbx-bombonjera" class="chbx-bombonjera" />
+            <label for="chbx-bombonjera">Bombonjera</label>
+          </div>
+          <div class="input-group checkbox-group">
+            <input type="checkbox" id="chbx-cokolada"  />
+            <label for="chbx-cokolada" class="chbx-cokolada" >Cokoloda</label>
+          </div>
+          <div class="input-group checkbox-group">
+            <input type="checkbox" id="chbx-sampanjac"  />
+            <label for="chbx-sampanjac" class="chbx-sampanjac">Sampanjac</label>
+          </div>
+        </div>
         </div>
         <div class="div-placanje">
-          <h1>Placanje:</h1>
-          <input type="radio" name="" class="radio-kes" /> Kes
-          <input type="radio" name="" class="radio-kartica" /> Kartica
+          <h1 class="naslov-placanje">Placanje:</h1>
+          <input type="radio" name="placanje" class="radio-kes" /> Kes
+          <input type="radio" name="placanje" class="radio-kartica" /> Kartica
         </div>
         <div class="div-btns">
           <button type="submit" class="btn-izracunaj">Izracunaj</button>
-          <button type="reset" class="btn-izracunaj">Resetuj</button>
+          <button type="reset" class="btn-resetuj">Resetuj</button>
         </div>
       </form>
     </label>

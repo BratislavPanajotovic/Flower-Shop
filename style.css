@@ -4,27 +4,90 @@
   width: 50%;
   padding: 10px;
 }
+.naslov-cvece {
+  margin-top: 60px;
+}
 .div-cvece {
-  display: block;
-  margin: auto;
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   padding: 10px;
+  margin: auto;
+  text-align: center;
 }
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+}
+
+.div-cvece label {
+  margin-right: 5px;
+}
+
+.div-cvece input {
+  margin: 2px;
+}
+.ruza {
+  padding-right: 13.5px;
+}
+.pokloni-naslov {
+  padding-left: 22px;
+}
+
 .div-pokloni {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: auto;
   width: 50%;
   padding: 10px;
+  text-align: center;
 }
+
+.input-group.checkbox-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-group.checkbox-group input {
+  margin: 5px;
+}
+
+.input-group.checkbox-group label {
+  margin-left: 5px;
+}
+.chbx-cokolada {
+  padding-right: 16.5px;
+}
+.chbx-sampanjac {
+  padding-right: 8px;
+}
+.naslov-placanje {
+  padding-left: 12px;
+}
+
 .div-placanje {
   display: block;
   margin: auto;
   width: 50%;
   padding: 10px;
+  padding-bottom: 30px;
+  text-align: center;
 }
+
 .div-btns {
-  display: block;
-  margin: auto;
-  width: 50%;
-  padding: 10px;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+.btn-izracunaj {
+  margin-right: 50px;
+}
+.btn-resetuj {
+  margin-left: 50px;
 }
