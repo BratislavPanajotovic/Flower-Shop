@@ -11,16 +11,16 @@
         <div class="div-cvece">
           <h1 class="naslov-cvece">Odaberite cvece:</h1>
           <div class="input-group">
-            <label for="ruza" class="ruza">Ruza</label>
             <input type="number" id="ruza" />
+            <label for="ruza" class="ruza">Ruza</label>
           </div>
           <div class="input-group">
-            <label for="ljiljani">Ljiljani</label>
             <input type="number" id="ljiljani" />
+            <label for="ljiljani">Ljiljani</label>
           </div>
           <div class="input-group">
-            <label for="gerberi">Gerberi</label>
             <input type="number" id="gerberi" />
+            <label for="gerberi">Gerberi</label>
           </div>
         </div>
         <div class="div-pokloni">
@@ -41,11 +41,18 @@
         </div>
         <div class="div-placanje">
           <h1 class="naslov-placanje">Placanje:</h1>
-          <input type="radio" name="placanje" class="radio-kes" /> Kes
-          <input type="radio" name="placanje" class="radio-kartica" /> Kartica
-  //* Ovde si stao - ideja je da se batoni ubace u div placanje i da se onda lepo rasporede eliementi u divu *//
+          <div class="input-radio">
+            <div class="radio-kes">
+          <input type="radio" name="placanje" placeholder="kes"> Kes
+        </div>
+        <div class="radio-kartica">
+          <input type="radio" name="placanje"  /> Kartica
+        </div>
+        </div>
+        <div class="btns">
           <button type="submit" class="btn-izracunaj">Izracunaj</button>
           <button type="reset" class="btn-resetuj">Resetuj</button>
+        </div>
         </div>
       </form>
     </label>
