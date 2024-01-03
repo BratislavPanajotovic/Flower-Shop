@@ -11,15 +11,15 @@
         <div class="div-cvece">
           <h1 class="naslov-cvece">Odaberite cvece:</h1>
           <div class="input-group">
-            <input type="number" id="ruza" />
+            <input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="0" max="20" name="ruza"  id="ruza" placeholder="Cena po cvetu je 150 din." />
             <label for="ruza" class="ruza">Ruza</label>
           </div>
           <div class="input-group">
-            <input type="number" id="ljiljani" />
+            <input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="0"max="20"name="ljiljani"  id="ljiljani" placeholder="Cena po cvetu je 120 din."/>
             <label for="ljiljani">Ljiljani</label>
           </div>
           <div class="input-group">
-            <input type="number" id="gerberi" />
+            <input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="0"max="20" name="gerberi"  id="gerberi" placeholder="Cena po cvetu je 70 din."/>
             <label for="gerberi">Gerberi</label>
           </div>
         </div>
@@ -56,6 +56,17 @@
         </div>
       </form>
     </label>
+
+    <div class="slikovni-Prikaz">
+
+      <h1>Vasa porudzbina:</h1>
+      <div class="ruze">
+      <img  alt="porudzbina" id="slika"/>
+    </div>
+      <img src="" alt="porudzbina" id="slika"/>
+      <img src="" alt="porudzbina" id="slika"/>
+
+    </div>
 
     <script src="script.js"></script>
   </body>
