@@ -1,6 +1,7 @@
 body {
   background-image: url("Slike/272728-2118x1412-summer-flowers.jpg");
 }
+
 .forma {
   display: block;
   margin: auto;
@@ -10,9 +11,11 @@ body {
   backdrop-filter: blur(5px);
   box-shadow: -2px -2px 10px 10px rgba(217, 70, 234, 0.6);
 }
+
 .naslov-cvece {
-  margin-top: 25%;
+  margin-top: 10%;
 }
+
 .div-cvece {
   display: flex;
   flex-direction: column;
@@ -36,9 +39,11 @@ body {
 .div-cvece input {
   margin: 2px;
 }
+
 .ruza {
   padding-right: 13.5px;
 }
+
 .pokloni-naslov {
   padding-left: 22px;
 }
@@ -56,24 +61,39 @@ body {
 .input-group.checkbox-group {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .input-group.checkbox-group input {
-  margin: 5px;
+  /* margin: 5px; */
 }
 
 .input-group.checkbox-group label {
-  margin-left: 5px;
+  /* margin-left: 5px; */
+  display: flex;
+  align-items: center;
 }
+
 .chbx-cokoladaa {
   padding-right: 16.5px;
 }
+
 .chbx-sampanjacc {
-  padding-right: 8px;
+  padding-right: 8.5px;
 }
+.chbx-bombonjeraa {
+  padding-left: 8.5px;
+}
+
 .naslov-placanje {
   padding-left: 12px;
+  margin-bottom: 2px;
+}
+
+.naslov-placanje-popust {
+  color: rgb(15, 14, 14);
+  font-weight: lighter;
+  margin: 1.5px;
 }
 
 .div-placanje {
@@ -81,61 +101,64 @@ body {
   margin: auto;
   width: 50%;
   padding: 10px;
-  padding-bottom: 30px;
   text-align: center;
 }
+
+.radio-kes input,
+.radio-kartica input {
+  margin: 5px; /* Add this line to give space between radio buttons */
+}
+
 .input-radio {
   margin-top: 40px;
   margin-bottom: 40px;
-}
-.radio-kes {
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* Add this line */
+}
+
+.radio-kes {
   text-align: center;
-  align-items: center;
   margin-bottom: 20px;
 }
+
 .radio-kartica {
-  display: flex;
-  justify-content: center;
   text-align: center;
-  align-items: center;
   padding-left: 20px;
 }
-.btn-izracunaj {
-  margin: 20px;
-}
+
+.btn-izracunaj,
 .btn-resetuj {
   margin: 20px;
 }
+
 .btns {
-  margin-bottom: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-/* Stil za eventListenner-e */
-.ruzaAvatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 10%;
-}
-.ljiljaniAvatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 10%;
-}
+
+.ruzaAvatar,
+.ljiljaniAvatar,
 .gerberiAvatar {
   width: 50px;
   height: 50px;
   border-radius: 10%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
-#ruza {
-  width: 162px;
-}
-#ljiljani {
-  width: 162px;
-}
+
+#ruza,
+#ljiljani,
 #gerberi {
   width: 162px;
+}
+
+.Bombonjera,
+.Cokolada,
+.Sampanjac {
+}
+
+.cena,
+.cena-popust {
 }

@@ -52,6 +52,7 @@ btnIzracunaj.addEventListener("click", function (event) {
       noviPar.textContent = `Cena bez popusta je: ${cena} dinara.`;
       cenaPopust.textContent = `Cena sa popustom je ${cena * 0.9} dinara.`;
       noviPar.classList.add("cena");
+      cenaPopust.classList.add("cena-popust");
     } else if (radioKes.checked) {
       let noviPar = document.createElement("p");
       divSlika.appendChild(noviPar);
