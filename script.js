@@ -4,16 +4,6 @@ let inputLjiljani = document.getElementById("ljiljani");
 let inputGerberi = document.getElementById("gerberi");
 let divSlika = document.querySelector(".slikovni-Prikaz");
 
-// let chbxBombonjera = document.querySelector('.chbx-bombonjera');
-// let chbxCokoloda = document.querySelector('.chbx-cokoloada');
-// let chbxSampanjac = document.querySelector('.chbx-sampanjac');
-
-let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
-let checked = [];
-checkboxes.forEach((checkbox) => {
-  checked.push(checkbox.value);
-});
-
 btnIzracunaj.addEventListener("click", function (event) {
   event.preventDefault();
   divSlika.innerHTML = "";
@@ -36,11 +26,20 @@ btnIzracunaj.addEventListener("click", function (event) {
     novaSlika.classList.add(klasa);
     divSlika.appendChild(novaSlika);
   }
+
   function dodajParagraf(textContent) {
     let noviP = document.createElement("p");
     divSlika.appendChild(noviP);
     noviP.textContent = textContent;
   }
+
+  let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+  let checked = [];
+  checkboxes.forEach((checkbox) => {
+    checked.push(checkbox.value);
+  });
+
+  console.log("Checked values:", checked); // Add this line for debugging
 
   for (let i = 0; i < ruzeKom; i++) {
     dodajSliku(srcSlikeR, "ruzaAvatar");
@@ -55,26 +54,17 @@ btnIzracunaj.addEventListener("click", function (event) {
   }
 
   for (let i = 0; i < checked.length; i++) {
-    if (checked[i].value == Bombonjera) {
-      texContent = `+ ${checked[i].value}`;
+    if (checked[i] === "Bombonjera") {
+      texContent = `+ ${checked[i]}`;
       dodajParagraf(texContent);
     }
-    if (checked[i].value == Cokolada) {
-      texContent = `+ ${checked[i].value}`;
+    if (checked[i] === "Cokolada") {
+      texContent = `+ ${checked[i]}`;
       dodajParagraf(texContent);
     }
-    if (checked[i].value == Sampanjac) {
-      texContent = `+ ${checked[i].value}`;
+    if (checked[i] === "Sampanjac") {
+      texContent = `+ ${checked[i]}`;
       dodajParagraf(texContent);
     }
   }
 });
-
-// btnIzracunaj.addEventListener("click", (e) => {
-//   e.preventDefault();
-//   let ruzeKom = ruze.value;
-//   console.log(ruzeKom);
-//   for (i = 0; i < ruzeKom; i++) {
-//     divSlika.innerHTML += ` <img src="Slike/ruzaAvatar.jfif" class="ruzaAvatar" /> `;
-//   }
-// });
