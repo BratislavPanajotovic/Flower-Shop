@@ -7,7 +7,7 @@
     <title>Cvecara</title>
   </head>
   <body>
-      <form action="" class="forma">
+      <form action="" class="form" id="form">
         <div class="div-cvece">
           <h1 class="naslov-cvece">Odaberite cvece:</h1>
           <div class="input-group">
@@ -42,16 +42,15 @@
         </div>
         <div class="div-placanje">
           <h1 class="naslov-placanje">Placanje:</h1>
-          <h6 class="naslov-placanje">Za placanje karticom imate popust od 10% !</h6>
-
-          <div class="input-radio">
-            <div class="radio-kes">
-          <input type="radio" name="placanje" placeholder="kes" class="kes-radio"> Kes
-        </div>
-        <div class="radio-kartica">
-          <input type="radio" name="placanje" class="kartica-radio" /> Kartica
-        </div>
-        </div>
+          <small class="popust-placanje">Za placanje karticom imate popust od 10% !</small>
+            <div class="input-radio">
+              <div class="kes-kartica">
+              <input type="radio" name="placanje" placeholder="kes" id="kess"  class="kes-radio"> <label for="kess">Kes</label>
+            </div>
+            <div class="kes-kartica">
+              <div><input type="radio" name="placanje" id="karticaa" class="kartica-radio" /></div>     <div><label for="karticaa">Kartica</label></div>
+            </div>
+          </div>
         <div class="btns">
           <button type="submit" class="btn-izracunaj">Izracunaj</button>
           <button type="reset" class="btn-resetuj">Resetuj</button>

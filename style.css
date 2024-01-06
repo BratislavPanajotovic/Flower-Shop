@@ -2,14 +2,17 @@ body {
   background-image: url("Slike/272728-2118x1412-summer-flowers.jpg");
 }
 
-.forma {
+.form {
   display: block;
   margin: auto;
   width: 35%;
   border: 2px solid rgb(214, 135, 214);
   border-radius: 5%;
   backdrop-filter: blur(5px);
-  box-shadow: -2px -2px 10px 10px rgba(217, 70, 234, 0.6);
+  -webkit-box-shadow: 0px 0px 18px 13px rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 0px 0px 18px 13px rgba(0, 0, 0, 0.26);
+  box-shadow: 0px 0px 18px 13px rgba(0, 0, 0, 0.26);
+  /* box-shadow: -2px -2px 10px 10px rgba(217, 70, 234, 0.6); */
 }
 
 .naslov-cvece {
@@ -20,10 +23,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
   padding: 10px;
   margin: auto;
   text-align: center;
+  border-radius: 100%;
 }
 
 .input-group {
@@ -45,7 +48,6 @@ body {
 }
 
 .pokloni-naslov {
-  padding-left: 22px;
 }
 
 .div-pokloni {
@@ -62,6 +64,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  min-width: 120px;
+  gap: 5px;
 }
 
 .input-group.checkbox-group input {
@@ -75,14 +79,11 @@ body {
 }
 
 .chbx-cokoladaa {
-  padding-right: 16.5px;
 }
 
 .chbx-sampanjacc {
-  padding-right: 8.5px;
 }
 .chbx-bombonjeraa {
-  padding-left: 8.5px;
 }
 
 .naslov-placanje {
@@ -94,6 +95,10 @@ body {
   color: rgb(15, 14, 14);
   font-weight: lighter;
   margin: 1.5px;
+}
+.popust-placanje {
+  font-weight: bold;
+  font-style: italic;
 }
 
 .div-placanje {
@@ -109,28 +114,35 @@ body {
   margin: 5px; /* Add this line to give space between radio buttons */
 }
 
+.kes-kartica {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 60px;
+  gap: 5px;
+}
+
 .input-radio {
   margin-top: 40px;
   margin-bottom: 40px;
   display: flex;
   flex-direction: column; /* Add this line */
-}
-
-.radio-kes {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.radio-kartica {
-  text-align: center;
-  padding-left: 20px;
+  align-items: center;
+  gap: 8px;
 }
 
 .btn-izracunaj,
 .btn-resetuj {
   margin: 20px;
 }
-
+.btn-izracunaj {
+  background-color: rgb(255, 255, 116);
+  border-radius: 13%;
+}
+.btn-resetuj {
+  background-color: rgb(246, 148, 112);
+  border-radius: 13%;
+}
 .btns {
   display: flex;
   justify-content: center;
