@@ -25,7 +25,7 @@ btnIzracunaj.addEventListener("click", function (event) {
     let gerberiKom = parseInt(inputGerberi.value) || 0;
 
     let srcSlikeR = "Slike/ruzaAvatar.jfif";
-    let srcSlikeLj = "Slike/ljiljanAvatar.jpg";
+    let srcSlikeLj = "Slike/ljiljanAvatar.avif";
     let srcSlikeG = "Slike/gerberiAvatar.jpg";
 
     function dodajSliku(src, klasa) {
