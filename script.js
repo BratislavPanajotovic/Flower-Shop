@@ -121,10 +121,12 @@ btnIzracunaj.addEventListener("click", function (event) {
       "Molimo Vas, izaberite cvece i kolicinu cveca koje biste zeleli. Hvala."
     );
   }
+  document.getElementById("scroll").scrollIntoView({ behavior: "smooth" });
 });
 btnResetuj.addEventListener("click", (event) => {
   event.preventDefault();
   console.log("Klik");
+  document.getElementById("scrollTop").scrollIntoView({ behavior: "smooth" });
   form.reset();
   divSlika.innerHTML = "";
 });
