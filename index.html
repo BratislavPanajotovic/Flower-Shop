@@ -11,15 +11,15 @@
         <div class="div-cvece">
           <h1 class="naslov-cvece">Odaberite cvece:</h1>
           <div class="input-group">
-            <input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="0" max="20" name="ruza"  id="ruza" placeholder="Cena po cvetu je 150 din." />
+            <input type="number" onkeypress="return  event.charCode >= 48 && event.charCode <= 57" min="0" max="20" name="ruza"  id="ruza" placeholder="Cena po cvetu je 150 din." />
             <label for="ruza" class="ruza">Ruza</label>
           </div>
           <div class="input-group">
-            <input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="0"max="20"name="ljiljani"  id="ljiljani" placeholder="Cena po cvetu je 120 din."/>
+            <input type="number" onkeypress="return event.charCode >= 48 && event.charCode <= 57" min="0"max="20"name="ljiljani"  id="ljiljani" placeholder="Cena po cvetu je 120 din."/>
             <label for="ljiljani">Ljiljani</label>
           </div>
           <div class="input-group">
-            <input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" min="0"max="20" name="gerberi"  id="gerberi" placeholder="Cena po cvetu je 70 din."/>
+            <input type="number" onkeypress="return  event.charCode >= 48 && event.charCode <= 57" min="0"max="20" name="gerberi"  id="gerberi" placeholder="Cena po cvetu je 70 din."/>
             <label for="gerberi">Gerberi</label>
           </div>
         </div>
@@ -42,7 +42,7 @@
         </div>
         <div class="div-placanje">
           <h1 class="naslov-placanje">Placanje:</h1>
-          <small class="popust-placanje">Za placanje karticom imate popust od 10% !</small>
+          <small class="popust-placanje">Za porudzbine od najmanje 2000 dinara imate popust od 10% za placanje karticom!</small>
             <div class="input-radio">
               <div class="kes-kartica">
               <input type="radio" name="placanje" placeholder="kes" id="kess"  class="kes-radio"> <label for="kess">Kes</label>

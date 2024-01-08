@@ -12,9 +12,9 @@ btnIzracunaj.addEventListener("click", function (event) {
   event.preventDefault();
   divSlika.innerHTML = "";
   if (
-    (inputRuze.value !== "" && parseInt(inputRuze.value) !== 0) ||
-    (inputLjiljani.value !== "" && parseInt(inputLjiljani.value) !== 0) ||
-    (inputGerberi.value !== "" && parseInt(inputGerberi.value) !== 0)
+    parseInt(inputRuze.value) !== 0 ||
+    parseInt(inputLjiljani.value) !== 0 ||
+    parseInt(inputGerberi.value) !== 0
   ) {
     let naslov = document.createElement("h1");
     divSlika.appendChild(naslov);
@@ -43,34 +43,43 @@ btnIzracunaj.addEventListener("click", function (event) {
     }
 
     function dodajCenu() {
-      if (radioKartica.checked) {
+      let cena =
+        ruzeKom * 150 +
+        ljiljaniKom * 120 +
+        gerberiKom * 70 +
+        checked.length * 500;
+      if (radioKartica.checked && cena >= 2000) {
         let noviPar = document.createElement("p");
         let cenaPopust = document.createElement("h3");
         divSlika.appendChild(noviPar);
         divSlika.appendChild(cenaPopust);
 
-        let cena = 0;
-        cena =
-          ruzeKom * 150 +
-          ljiljaniKom * 120 +
-          gerberiKom * 70 +
-          checked.length * 500;
         noviPar.textContent = `Cena bez popusta je: ${cena} dinara.`;
         cenaPopust.textContent = `Cena sa popustom je ${cena * 0.9} dinara.`;
+        noviPar.classList.add("cena");
+        cenaPopust.classList.add("cena-popust");
+      } else if (radioKartica.checked && cena < 2000) {
+        let noviPar = document.createElement("p");
+        let cenaPopust = document.createElement("h3");
+
+        divSlika.appendChild(noviPar);
+        divSlika.appendChild(cenaPopust);
+
+        noviPar.textContent = `Cena bez popusta je: ${cena} dinara.`;
+        cenaPopust.textContent = `Za porudzbine od najmanje 2000 dinara imate popust od 10% za placanje karticom!`;
         noviPar.classList.add("cena");
         cenaPopust.classList.add("cena-popust");
       } else if (radioKes.checked) {
         let noviPar = document.createElement("p");
         divSlika.appendChild(noviPar);
-        let cena = 0;
-        cena =
-          ruzeKom * 150 +
-          ljiljaniKom * 120 +
-          gerberiKom * 70 +
-          checked.length * 500;
-        noviPar.textContent = `Cena je: ${cena}.
+        if (cena >= 2000) {
+          noviPar.textContent = `Cena je: ${cena}.
         Za placanje karticom imate popust od 10%!`;
-        noviPar.classList.add("cena");
+          noviPar.classList.add("cena");
+        } else {
+          noviPar.textContent = `Cena je: ${cena}. dinara`;
+          noviPar.classList.add("cena");
+        }
       }
     }
 
@@ -102,24 +111,28 @@ btnIzracunaj.addEventListener("click", function (event) {
         checked[i] === "Cokolada" ||
         checked[i] === "Sampanjac"
       ) {
-        texContent = `+ ${checked[i]}`;
+        textContent = `+ ${checked[i]}`;
         let klasa = checked[i];
-        dodajParagraf(texContent, klasa);
+        dodajParagraf(textContent, klasa);
       }
     }
-    if (radioKartica.checked || radioKes.checked) {
+    if (
+      radioKartica.checked ||
+      (radioKes.checked &&
+        (inputRuze.value != 0 ||
+          inputLjiljani.value != 0 ||
+          inputGerberi.value != 0))
+    ) {
       dodajCenu();
     } else {
       alert(
-        "Molimo Vas, izaberite nacin placanja kako biste videli koja je cena izabranog buketa cveca. Hvala."
+        "Molimo Vas, izaberite kolicinu cveca i nacin placanja kako biste videli izabrani buket cveca i njegovu cenu."
       );
     }
 
     console.log(ruzeKom, ljiljaniKom, gerberiKom, checked.length);
   } else {
-    alert(
-      "Molimo Vas, izaberite cvece i kolicinu cveca koje biste zeleli. Hvala."
-    );
+    alert("Molimo Vas, izaberite cvece i kolicinu cveca koje biste zeleli.");
   }
   document.getElementById("scroll").scrollIntoView({ behavior: "smooth" });
 });

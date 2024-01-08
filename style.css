@@ -213,8 +213,11 @@ body {
 .Bombonjera,
 .Cokolada,
 .Sampanjac {
+  color: rgb(10, 17, 1);
 }
-
-.cena,
+.cena {
+  color: rgb(2, 1, 0);
+}
 .cena-popust {
+  color: rgb(0, 0, 0);
 }
