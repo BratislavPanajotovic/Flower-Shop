@@ -10,12 +10,12 @@ let radioKartica = document.querySelector(".kartica-radio");
 
 btnIzracunaj.addEventListener("click", function (event) {
   event.preventDefault();
-  divSlika.innerHTML = "";
   if (
     parseInt(inputRuze.value) !== 0 ||
     parseInt(inputLjiljani.value) !== 0 ||
     parseInt(inputGerberi.value) !== 0
   ) {
+    divSlika.innerHTML = "";
     let naslov = document.createElement("h1");
     divSlika.appendChild(naslov);
     naslov.textContent = "Vas buket izgleda ovako:";
@@ -48,6 +48,7 @@ btnIzracunaj.addEventListener("click", function (event) {
         ljiljaniKom * 120 +
         gerberiKom * 70 +
         checked.length * 500;
+
       if (radioKartica.checked && cena >= 2000) {
         let noviPar = document.createElement("p");
         let cenaPopust = document.createElement("h3");
@@ -67,17 +68,19 @@ btnIzracunaj.addEventListener("click", function (event) {
 
         noviPar.textContent = `Cena bez popusta je: ${cena} dinara.`;
         cenaPopust.textContent = `Za porudzbine od najmanje 2000 dinara imate popust od 10% za placanje karticom!`;
+
         noviPar.classList.add("cena");
         cenaPopust.classList.add("cena-popust");
       } else if (radioKes.checked) {
         let noviPar = document.createElement("p");
         divSlika.appendChild(noviPar);
+
         if (cena >= 2000) {
-          noviPar.textContent = `Cena je: ${cena}.
-        Za placanje karticom imate popust od 10%!`;
+          noviPar.textContent = `Cena je: ${cena} dinara.Za placanje karticom imate popust od 10%!`;
+
           noviPar.classList.add("cena");
         } else {
-          noviPar.textContent = `Cena je: ${cena}. dinara`;
+          noviPar.textContent = `Cena je: ${cena} dinara`;
           noviPar.classList.add("cena");
         }
       }
@@ -123,7 +126,8 @@ btnIzracunaj.addEventListener("click", function (event) {
           inputLjiljani.value != 0 ||
           inputGerberi.value != 0))
     ) {
-      dodajCenu();
+      dodajCe
+      nu();
     } else {
       alert(
         "Molimo Vas, izaberite kolicinu cveca i nacin placanja kako biste videli izabrani buket cveca i njegovu cenu."

@@ -1,5 +1,8 @@
 body {
-  background-image: url("Slike/272728-2118x1412-summer-flowers.jpg");
+  background-image: url("Slike/pozadina1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .form {
@@ -208,6 +211,7 @@ body {
 #ljiljani,
 #gerberi {
   width: 162px;
+  border-radius: 10px;
 }
 
 .Bombonjera,
