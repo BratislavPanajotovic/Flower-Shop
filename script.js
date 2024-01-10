@@ -126,8 +126,7 @@ btnIzracunaj.addEventListener("click", function (event) {
           inputLjiljani.value != 0 ||
           inputGerberi.value != 0))
     ) {
-      dodajCe
-      nu();
+      dodajCenu();
     } else {
       alert(
         "Molimo Vas, izaberite kolicinu cveca i nacin placanja kako biste videli izabrani buket cveca i njegovu cenu."
